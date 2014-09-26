@@ -1,0 +1,13 @@
+<input type="search" class="form-control app-search" placeholder="Paieška.." ng-model="q"/>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="list-group">
+            <a ng-repeat="theme in categoryData.themes | filter:q"
+               href="/klase/{{classId}}/skyrius/{{categoryId}}/tema/{{theme.id}}"
+               class="list-group-item">
+                {{ theme.name }} <i class="fa fa-chevron-right pull-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
