@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ifizika">
+    <serverData>
+      <paths name="ifizika">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/domains/ifizika.info/public_html/beta" local="$PROJECT_DIR$" web="/beta" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
+
