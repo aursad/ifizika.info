@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="dist/css/demo.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
     <script src="//code.angularjs.org/1.2.15/angular-resource.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.js"></script>
     <script src="dist/js/mobile-angular-ui.min.js"></script>
     <script src="dist/js/angular-ui-router.min.js"></script>
     <script src="app/common/module.js"></script>
@@ -25,16 +25,19 @@
     <!-- Include resources -->
     <script src="app/resources/get-class-resource.js"></script>
     <script src="app/resources/get-category-resource.js"></script>
+    <script src="app/resources/get-theme-resource.js"></script>
+    <script src="app/resources/get-post-resource.js"></script>
     <!-- Include controllers -->
     <script src="app/controllers/class-controller.js"></script>
     <script src="app/controllers/category-controller.js"></script>
+    <script src="app/controllers/skyrius-controller.js"></script>
     <script src="app/controllers/demo.js"></script>
 </head>
 <body ng-app="ifizika" ng-controller="MainController">
 
-<!-- Sidebars -->
-<div ng-include="'app/templates/common/sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in"
-     id="mainSidebar"></div>
+<!-- Sidebar -->
+<div ng-include="'app/templates/common/sidebar.html'"
+     class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
 
 <div class="app">
     <!-- Navbars -->
@@ -44,7 +47,7 @@
         </div>
         <div class="btn-group pull-left">
             <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
-                <i class="fa fa-bars"></i> Menu
+                <i class="fa fa-bars"></i> Klasės
             </div>
         </div>
         <div class="btn-group pull-right">
@@ -59,7 +62,7 @@
     <div class="navbar navbar-app navbar-absolute-bottom">
         <div class="btn-group justified">
             <a ui-sref="bendraukim" class="btn btn-navbar"><i class="fa fa-send fa-navbar"></i> Bendraukim</a>
-            <a ui-sref="naujienlaiskis" class="btn btn-navbar"><i class="fa fa-book fa-navbar"></i> Naujienlaiškis</a>
+            <a href="https://github.com/kaimis/mobile-angular-ifizika/issues" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Klaida?</a>
             <a ui-sref="apie" class="btn btn-navbar"><i class="fa fa-info-circle fa-navbar"></i> Apie mus</a>
         </div>
     </div>

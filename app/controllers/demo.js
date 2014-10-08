@@ -1,22 +1,19 @@
+app.controller('MainController', ['$rootScope', '$scope', '$state', 'classResource', '$http',
+    function ($rootScope, $scope, $state, classResource, $http) {
 
-app.controller('MainController',['$rootScope', '$scope', '$state', 'classResource','$http',
-    function($rootScope, $scope, $state, classResource, $http){
+        $rootScope.$on("$routeChangeStart", function () {
+            $rootScope.loading = true;
+        });
+        $rootScope.$on("$routeChangeSuccess", function () {
+            $rootScope.loading = false;
+        });
 
-  $rootScope.$on("$routeChangeStart", function(){
-    $rootScope.loading = true;
-  });
-
-  $rootScope.$on("$routeChangeSuccess", function(){
-    $rootScope.loading = false;
-  });
-        classResource.get({}, function(success)
-        {
+        classResource.get({}, function (success) {
             $scope.classData = success;
         });
 
 
-    $scope.goNext = function(classId)
-    {
-        $state.go("klase.list", {id: classId});
-    }
-}]);
+        $scope.goNext = function (classId) {
+            $state.go("klase.list", {id: classId});
+        }
+    }]);

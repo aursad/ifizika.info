@@ -23,11 +23,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         })
         .state('apie', {
             url: '/apie',
-            templateUrl: 'home.html'
+            templateUrl: 'app/templates/common/apie.html'
         })
         .state('bendraukim', {
             url: '/bendraukim',
-            templateUrl: 'home.html'
+            templateUrl: 'app/templates/common/bendraukim.html'
         })
         .state('klase', {
             abstract: true,
@@ -42,7 +42,12 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         .state('klase.skyrius', {
             url: '/:id/skyrius/:skyrius',
             templateUrl: "app/templates/category.html",
-            controller: "category-controller"
+            controller: "CategoryController"
+        })
+        .state('klase.tema', {
+            url: '/:id/skyrius/:skyrius/tema/:tema',
+            templateUrl: "app/templates/theme.html",
+            controller: "SkyriusController"
         })
     ;
 }]);

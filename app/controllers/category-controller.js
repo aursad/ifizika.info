@@ -1,25 +1,19 @@
-app.controller('category-controller',['$rootScope', '$scope', '$state', function($rootScope, $scope, $state) {
+app.controller('CategoryController',['$rootScope', '$scope', '$state','themesResource',
+    function($rootScope, $scope, $state, themesResource) {
+    $rootScope.$on("$routeChangeStart", function () {
+        $rootScope.loading = true;
+    });
+    $rootScope.$on("$routeChangeSuccess", function () {
+        $rootScope.loading = false;
+    });
+
     $scope.classId = $state.params.id;
     $scope.categoryId = $state.params.skyrius;
 
-    $scope.categoryData = {
-        "error": false,
-        "themes": [
-            {
-                "id": 94,
-                "name": "1. Kiet&#371j&#371 k&#363n&#371 sandara. Kristaliniai ir amorfiniai k&#363nai"
-            },
-            {
-                "id": 95,
-                "name": "2. Kiet&#371j&#371 k&#363n&#371 deformacijos r&#363&#353ys"
-            },
-            {
-                "id": 96,
-                "name": "3. Kiet&#371j&#371 k&#363n&#371 mechanin&#279s savyb&#279s"
-            }
-        ]
-    };
+        themesResource.get({id: $scope.classId, skyrius: $scope.categoryId }, function (success) {
+        $scope.categoryData = success;
+    });
+    $scope.goNext = function (themeId) {
+        $state.go("klase.tema", {id: $scope.classId, skyrius: $scope.categoryId, tema: themeId});
+    }
 }]);
-/**
- * Created by Aurimas on 2014-09-26.
- */
