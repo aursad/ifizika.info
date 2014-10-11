@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ifizika">
+  <component name="PublishConfigData" autoUpload="Always" serverName="aursad">
     <serverData>
-      <paths name="ifizika">
+      <paths name="aursad">
         <serverdata>
           <mappings>
-            <mapping deploy="/domains/ifizika.info/public_html/beta" local="$PROJECT_DIR$" web="/beta" />
-            <mapping local="" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
