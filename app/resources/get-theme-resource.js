@@ -1,4 +1,6 @@
-app.factory('themesResource', ['$resource', function($resource) {
+'use strict';
+
+angular.factory('themesResource', ['$resource', function($resource) {
     return $resource('/api/v1/theme/:id/:skyrius', {id : '@id', skyrius : '@skyrius'}, {
             get: {
                 method: 'GET',

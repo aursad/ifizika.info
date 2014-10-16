@@ -1,4 +1,6 @@
-app.controller('ClassController', ['$rootScope', '$scope', '$state', 'categoryResource',
+'use strict';
+
+angular.controller('ClassController', ['$rootScope', '$scope', '$state', 'categoryResource',
     function ($rootScope, $scope, $state, categoryResource) {
         $rootScope.$on("$routeChangeStart", function () {
             $rootScope.loading = true;

@@ -1,4 +1,6 @@
-app.controller('MainController', ['$rootScope', '$scope', '$state', 'classResource', '$http',
+'use strict';
+
+angular.controller('MainController', ['$rootScope', '$scope', '$state', 'classResource', '$http',
     function ($rootScope, $scope, $state, classResource, $http) {
 
         $rootScope.$on("$routeChangeStart", function () {

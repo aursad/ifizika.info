@@ -1,4 +1,6 @@
-app.factory('postResource', ['$resource', function($resource) {
+'use strict';
+
+angular.factory('postResource', ['$resource', function($resource) {
     return $resource('/api/v1/post/:id', {id : '@id'}, {
             get: {
                 method: 'GET',

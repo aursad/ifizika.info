@@ -1,4 +1,6 @@
-app.controller('SkyriusController', ['$rootScope', '$scope', '$state', 'postResource',
+'use strict';
+
+angular.controller('SkyriusController', ['$rootScope', '$scope', '$state', 'postResource',
     function ($rootScope, $scope, $state, postResource) {
         $rootScope.$on("$routeChangeStart", function () {
             $rootScope.loading = true;

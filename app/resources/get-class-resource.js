@@ -1,4 +1,6 @@
-app.factory('classResource', ['$resource', function($resource) {
+'use strict';
+
+angular.factory('classResource', ['$resource', function($resource) {
     return $resource('/api/v1/class', null, {
             get: {
                 method: 'GET',

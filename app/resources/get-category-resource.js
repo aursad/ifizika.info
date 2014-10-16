@@ -1,4 +1,6 @@
-app.factory('categoryResource', ['$resource', function($resource) {
+'use strict';
+
+angular.factory('categoryResource', ['$resource', function($resource) {
     return $resource('/api/v1/category/:id', {id : '@id'}, {
             get: {
                 method: 'GET',
