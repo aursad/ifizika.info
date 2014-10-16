@@ -170,6 +170,7 @@ configure your server to serve the files under the `app/` directory.
 
 ## Continuous Integration
 
+Master: [![Build Status](https://travis-ci.org/kaimis/ifizika.info.svg?branch=master)](http://travis-ci.org/kaimis/ifizika.info)
 
 ## Contact
 
