@@ -4,9 +4,7 @@ module.exports = function(config){
     basePath : './',
 
     files : [
-      'app/common/**/*.js',
-      'app/controllers/**/*.js',
-	  'app/resources/**/*.js'
+      'app/controllers/**/*_test.js'
     ],
 
     autoWatch : true,
