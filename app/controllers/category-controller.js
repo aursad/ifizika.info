@@ -1,4 +1,6 @@
-app.controller('CategoryController',['$rootScope', '$scope', '$state','themesResource',
+'use strict';
+
+angular.controller('CategoryController',['$rootScope', '$scope', '$state','themesResource',
     function($rootScope, $scope, $state, themesResource) {
     $rootScope.$on("$routeChangeStart", function () {
         $rootScope.loading = true;

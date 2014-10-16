@@ -1,4 +1,6 @@
-app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+'use strict';
+
+angular.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 
