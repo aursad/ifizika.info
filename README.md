@@ -50,7 +50,7 @@ this server is:
 npm start
 ```
 
-Now browse to the app at `http://localhost:8000/app/index.html`.
+Now browse to the app at `http://localhost:8000/`.
 
 
 ## Testing
@@ -64,7 +64,7 @@ The ifizika.info app comes preconfigured with unit tests. These are written in
 configuration file to run them.
 
 * the configuration is found at `karma.conf.js`
-* the unit tests are found next to the code they are testing and are named as `..._test.js`.
+* the unit tests are found next to the code they are testing and are named as `test/..._test.js`.
 
 The easiest way to run the unit tests is to use the supplied npm script:
 
@@ -165,7 +165,7 @@ http-server -a localhost -p 8000
 ```
 
 Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
-configure your server to serve the files under the `app/` directory.
+configure your server to serve the files under the `./` directory.
 
 
 ## Continuous Integration
