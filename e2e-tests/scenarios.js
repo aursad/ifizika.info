@@ -7,6 +7,6 @@ describe('ifizika', function() {
   browser.get('index.html');
 
   it('should automatically redirect to / when location hash/fragment is empty', function() {
-    expect(browser.getLocationAbsUrl()).toMatch("/beta/");
+    expect(browser.getLocationAbsUrl()).toMatch("/");
   });
 });
