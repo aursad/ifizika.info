@@ -1,21 +1,23 @@
 <div data-ng-show="categoryData.themes.length > 0">
-<input type="search" class="form-control app-search" placeholder="Paieška.." ng-model="q"/>
-<div class="scrollable">
-    <div class="scrollable-content">
-        <div class="list-group">
-            <a ng-repeat="theme in categoryData.themes | filter:q"
-               href="klase/{{classId}}/skyrius/{{categoryId}}/tema/{{theme.id}}"
-               class="list-group-item" ng-click="goNext(theme.id)">
-                {{ theme.name }} <i class="fa fa-chevron-right pull-right"></i>
-            </a>
+    <input type="search" class="form-control app-search" placeholder="Paieška.." ng-model="q"/>
+
+    <div class="scrollable">
+        <div class="scrollable-content">
+            <div class="list-group">
+                <a ng-repeat="theme in categoryData.themes | filter:q"
+                   href="klase/{{classId}}/skyrius/{{categoryId}}/tema/{{theme.id}}"
+                   class="list-group-item" ng-click="goNext(theme.id)">
+                    {{ theme.name }} <i class="fa fa-chevron-right pull-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-    </div>
 <div data-ng-show="categoryData.themes.length == 0" class="col-sm-12">
     <div class="scrollable-content">
         <div class="list-group">
+            <br/>
             <div class="alert alert-danger" role="alert">Oops... Šiame skyriuje temų nėra.</div>
         </div>
     </div>
-    </div>
+</div>

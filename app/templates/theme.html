@@ -1,18 +1,23 @@
-<div class="scrollable">
-    <div class="scrollable-content">
-    </div>
-</div>
-<div class="scrollable">
-    <div class="scrollable-content">
-
-        <div class="list-group">
-            <div class="list-group-item">
-                <h3>{{postData.name}}<br/>
-                <small>{{postData.createdAt}}</small>
-                </h3>
-                <p ng-bind-html="postData.text"></p>
+<div data-ng-show="postData.id != null">
+    <div class="scrollable">
+        <div class="scrollable-content">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <h3>{{postData.name}}<br/>
+                        <small>{{postData.createdAt}}</small>
+                    </h3>
+                    <p ng-bind-html="postData.text"></p>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+<div data-ng-if="postData == null" class="col-sm-12">
+    <div class="scrollable-content">
+        <div class="list-group">
+            <br/>
 
+            <div class="alert alert-danger" role="alert">Oops... Tokia tema neegzistuoja.</div>
+        </div>
     </div>
 </div>

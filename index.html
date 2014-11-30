@@ -2,13 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <base href="/"/>
+    <base href="/beta/"/>
     <title>iFizika.info</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="author" content="Aurimas Sadauskas" />
+    <meta property="og:image" content="http://www.ifizika.info/img/fb-logo.png" />
+    <meta property="fb:admins" content="100000527265211"/>
+    <meta name="description" content="Surask norima informacija apie fizika" />
+    <meta name="google-site-verification" content="7NfFWAJDJ1aX2wNeOl_RzgkxwPLc1LMw3IrzhXEYYws" />
+    <meta name="alexaVerifyID" content="A4GeGOnre8CH3b6lP22MiEaATm0" />
+    <meta name="keywords" content="magnetinis laukas,fizika,fizikos teorija,fizikos apibrezimai,ifizika,ifizika.info,tvs,ktvs,turinio,valdymo,sistema,kaimis,aurimas,sadauskas,vydunas,metinis,fizikos uzdaviniai,lenco taisykle,sraigto taisykle,mechanika,lorenco jega,lorenco jėga,ifizika.info,veb, veb fizika, jega, niutonas" />
     <link rel="shortcut icon" href="/img/ico.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css"/>
     <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.min.css"/>
@@ -18,7 +24,7 @@
     <script src="//code.angularjs.org/1.2.15/angular-resource.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-touch.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.js"></script>
-    <script src="dist/js/ifizika.min.js"></script>
+    <script src="dist/js/mobile-ifizika.min.js"></script>
 </head>
 <body ng-app="ifizika" ng-controller="MainController">
 
@@ -64,5 +70,15 @@
 
 </div>
 <!-- ~ .app -->
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-7845803-3");
+        pageTracker._trackPageview();
+    } catch(err) {}
+</script>
 </body>
 </html>
